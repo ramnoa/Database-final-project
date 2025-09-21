@@ -66,6 +66,9 @@ SOURCE Library_management_system.sql;
 Here is the ER diagram for the Library Management System:
 
 ![EER Diagram](./EER%20DIAGRAM.png)
+
+
+
 👨‍💻 Author
 
 Developed by Noah Ewalan Logong 
