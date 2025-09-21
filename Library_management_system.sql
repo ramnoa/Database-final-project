@@ -43,10 +43,14 @@ Status VARCHAR(100) NOT NULL,
 FOREIGN KEY (ISBN) REFERENCES BookS(ISBN),
 FOREIGN KEY (user_id) REFERENCES Reader(user_id)
 );
+-- added ISBN to show books was published by the publisher
 ALTER TABLE Publisher
 ADD COLUMN ISBN VARCHAR(100),
 ADD CONSTRAINT fk_publisher_book
 FOREIGN KEY (ISBN) REFERENCES Books(ISBN);
-
-
+-- added staff_id in the report inorder to show which staff released or received the book
+ALTER TABLE Reports
+ADD COLUMN staff_id INT ,
+ADD CONSTRAINT fk_Report_staff
+FOREIGN KEY (staff_id) REFERENCES Staff(staff_id);
 
